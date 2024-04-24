@@ -1,0 +1,157 @@
+/*toda vez que eu for mudar alguma classe, eu tenho que colocar um ponto(.) antes*/
+/*UNIDADE DE MEDIDA REM É UTILIZADO PARA ADAPTAR OS ELEMENTOS NA TELA*/
+
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap'); /*linha utilizada para importar fonte SEM BAIXAR, atraves do link*/
+@import url('https://fonts.googleapis.com/css2?family=Krona+One&display=swap');
+
+:root { /*PSEUDOCLASSE QUE PODE SER APLICADA GLOBALMENTE NO MEU DOCUMENTO HTML, BUSCAR ELA COM A TAG "VAR"*/
+    --cor-primaria: #000000;
+    --cor-secundaria: #F6F6F6;  /*COLORHUNT - SITE UTILIZADO PARA PALETA DE COR*/
+    --cor-terciaria: #22D4FD;
+    --cor-hover: #272727;
+    
+    --fonte-primaria: "Krona One", sans-serif;
+    --fonte-secundaria: "Montserrat", sans-serif;
+
+}
+
+* { /*com o "*", estou selecionando todos os elementos do html*/
+    margin: 0%;
+    padding: 0%;
+}
+
+.cabecalho {
+    padding: 2% 0% 0% 15%;
+    
+
+}
+
+.cabecalhomenu {
+    display: flex; 
+    gap: 80px;
+}
+
+.cabecalhomenulink { 
+    color: var(--cor-terciaria);
+    font-family: var(--fonte-secundaria);
+    font-size: 1.5rem;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+body {
+    /*height: 100vh;*/ /*100% do viewport/tela no html*/
+    box-sizing: border-box; /*isso permite que nada saia do elemento pai(a tela)*/
+    background-color: var(--cor-primaria);
+    color: var(--cor-secundaria);
+
+}
+
+.apresentacao { /*classe do main*/
+    padding: 8% 15%; /*o primeiro valor é para o inferior e superior, o segundo valor é para os lados*/
+    justify-content: space-between; /*justificar conteudo*/
+    display: flex; /*coloca os elementos em linhas ou colunas, classe do main*/
+    align-items: center; /*alinhamento definido atraves do maior item, alinhamento entre eles*/
+    gap: 82px;
+}
+
+.apresentacaoconteudo {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.apresentacaoconteudotitulo {
+    font-size: 2.25rem;
+    font-family: var(--fonte-secundaria);
+
+            .textodestaque {
+                    color:var(--cor-terciaria);
+                    font-family: var(--fonte-primaria);
+                }
+
+            }
+
+.apresentacaoconteudoparagrafo {
+    font-size: 1.5rem ;
+    font-family: var(--fonte-secundaria);
+    text-align: justify;
+}
+
+.apresentacaolinkssubtitulo {
+    font-family: var(--fonte-secundaria);
+    font-size: 1.5rem;
+
+}
+
+.apresentacaolinks {
+    display: flex; flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 32px;
+}
+
+.apresentacaolinksbotao {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    border: 2px solid;
+    width: 50%;
+    text-align: center;
+    border-radius: 8px;
+    font-size: 1.5rem;
+    font-weight: 600;
+    padding: 21.5px 0;
+    text-decoration: none;
+    font-family: var(--fonte-secundaria);
+    color: var(--cor-secundaria);
+    font-weight: 600; 
+}
+
+            .apresentacaolinksbotao:hover {  /*AQUI EU VOU MUDAR O ESTILO DE NAVEGAÇÃO DA PAGINA, a cor dos botoes vao mudar ao passar o mouse em cima*/
+                background-color: var(--cor-hover);
+                box-shadow: 1px 1px var(--cor-terciaria),
+                2px 2px var(--cor-terciaria), 
+                3px 3px var(--cor-terciaria),
+                4px 4px var(--cor-terciaria),
+                5px 5px var(--cor-terciaria),
+                6px 6px var(--cor-terciaria),
+                2px 2px var(--cor-terciaria);
+                transform: translateX(-3px);
+            }
+
+.apresentacaoimagem {
+    width: 50%;
+}
+
+.rodape {
+    padding: 24px; /* padding = Distancia da borda pro conteudo */
+    color: var(--cor-primaria);
+    background-color: var(--cor-terciaria);
+    justify-content: center;
+    display: flex;
+    font-family: var(--fonte-secundaria);
+    text-align: center;
+
+}
+
+@media (max-width: 1300px) { /*essa bosta aqui so vai ser ativa se a tela tiver menos que 1200 pixels de largura*/
+    .cabecalho { /*declarando um conteudo*/
+        padding: 10%; /*estou revertendo a imagem, troca a ordem de baixo para cima*/
+    }
+
+    .cabecalhomenu {
+        justify-content: center;
+    }
+    
+    .apresentacao { /*declarando um conteudo*/
+        flex-direction: column-reverse; /*estou revertendo a imagem, troca a ordem de baixo para cima*/
+        padding: 5%;
+    }
+
+    .apresentacaoconteudo {
+        width: auto;
+    }
+}
